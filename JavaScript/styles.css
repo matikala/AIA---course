@@ -1,0 +1,24 @@
+.container {
+    padding: 5%;
+}
+
+table {
+    padding-top: 5%;
+    width: 100%;
+}
+
+th {
+    width: 33%;
+}
+
+thead {
+    text-align: center;
+}
+
+tbody > tr:nth-child(odd) {
+    background: lightgrey;
+}
+
+thead > tr {
+    background: white;
+}
