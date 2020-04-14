@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#get-button').click(async () => {
+                const response = await getFunc('https://randomuser.me/api/')
+                $('#content').html('')
+                $('#content').append(response)
+            })
+        })
+
+        let getFunc = (url) => {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest()
+                xhr.open('GET', url)
+                xhr.onload = () => {
+                    if (xhr.status == 200) {
+                        return resolve(xhr.response)
+                    } else {
+                        return reject(Error(xhr.statusText))
+                    }
+
+                }
+
+                xhr.onerror = e => reject(e)
+                xhr.send()
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <button id="get-button">Get</button>
+    <div id="content"></div>
+</body>
+
+</html>
