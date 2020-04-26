@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "rating": 5,
+        "author": "Vincent van Gogh",
+        "title": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911)",
+        "image": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1396.jpg"
+    },
+    {
+        "id": 2,
+        "rating": 5,
+        "author": "Goya (Francisco de Goya y Lucientes)",
+        "title": "Condesa de Altamira and Her Daughter, María Agustina",
+        "image": "https://images.metmuseum.org/CRDImages/rl/web-large/DP295708.jpg"
+    },
+    {
+        "id": 3,
+        "rating": 4,
+        "author": "Edgar Degas",
+        "title": "The Dancers",
+        "image": "https://images.metmuseum.org/CRDImages/ep/web-large/77I_053R2M.jpg"
+    },
+    {
+        "id": 4,
+        "rating": 4,
+        "author": "Camille Pissarro",
+        "title": "Haystacks, Morning, Éragny",
+        "image": "https://images.metmuseum.org/CRDImages/ep/web-large/DP116768.jpg"
+    }
+]

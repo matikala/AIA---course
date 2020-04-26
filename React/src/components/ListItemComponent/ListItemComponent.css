@@ -1,0 +1,40 @@
+li {
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+img {
+    max-height: 15rem;
+    max-width: 15rem;
+    width:auto;
+    
+}
+
+.image-div {
+    width: 18rem;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-data {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.item-buttons {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    align-items: flex-end;
+}
+
+.rating-component {
+    margin-bottom: 1rem;
+}

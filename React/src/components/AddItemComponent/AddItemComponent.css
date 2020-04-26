@@ -1,0 +1,30 @@
+.text-box-div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.add-item-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons-div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+
+.rating-div {
+    margin: 0 1rem;
+    width: 10%;
+}
+
+.add-button {
+    margin: 1rem;
+    min-width: 10%;
+    max-width: 30%;
+}
