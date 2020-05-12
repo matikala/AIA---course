@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<%- include('../include/head.ejs') -%>
+    <body class="container">
+        <nav class="navbar navbar-light bg-white mt-4">
+            <a class="navbar-brand h1" href="/">Car dealer</a>
+            <a class="btn btn-primary" href="/cart">Cart: <%= cart.length %> added</a>
+        </nav>
+        <main class="container">
+            <% if(!cars.length) { %>
+                    <div class="alert alert-primary m-5 h3">No cars available<a class="btn btn-danger btn-lg mx-5 text-light" href="/reset">Reset</a></div>
+            <% } else { %>
+                <table class="table table-striped mt-4">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Car</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% cars.forEach((car) => { %>
+                        <tr>
+                            <td class="align-baseline"><%= car.name %></td>
+                            <td class="align-middle">$ <%= car.price %></td>
+                            <td>
+                                <form class="align-middle" action="/cart" method="POST">
+                                    <button class="btn btn-link" <% if(cart.includes(parseInt(car.id))) { %>disabled<% } %>>Add to Cart</button>
+                                    <input type="hidden" name="id" value="<%= car.id %>">
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+            <% } %>
+        </main>
+    </body>
+</html>

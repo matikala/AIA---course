@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<%- include('../include/head.ejs') -%>
+    <body class="container">
+        <nav class="navbar navbar-light bg-white mt-4">
+            <a class="navbar-brand h3" href="/">Car dealer</a>
+            <a class="btn btn-primary" href="/">Home page</a>
+        </nav>
+        <main class="container">
+            <% if(error) { %>
+                <div class="alert alert-danger h3">At least one of cars already bought</div>
+            <% } %>
+            <% if(!cart.length) { %>
+                    <div class="alert alert-primary m-5 h3">Your cart is empty<a class="btn btn-primary btn-lg mx-5 text-light" href="/">Home page</a></div>
+            <% } else { %>
+                <table class="table table-striped mt-4">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Car</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% cart.forEach((car) => { %>
+                        <tr>
+                            <td class="align-baseline"><%= car.name %></td>
+                            <td class="align-middle">$ <%= car.price %></td>
+                            <td>
+                                <form class="align-middle" action="/remove" method="POST">
+                                    <button class="btn btn-link">Remove</button>
+                                    <input type="hidden" name="id" value="<%= car.id %>">
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+                <form class="form-inline float-sm-right" action="/removeall" method="POST"><button class="btn btn-danger mx-4">Remove all</button></form>
+                <form class="form-inline " action="/buy" method="POST"><button class="btn btn-primary mx-4">Buy</button></form>
+            <% } %>
+        </main>
+    </body>
+</html>
