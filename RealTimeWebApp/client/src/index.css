@@ -1,0 +1,32 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#register-div {
+  padding-top: 50px;
+}
+
+#messages-div {
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 40%;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+#users-div {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
